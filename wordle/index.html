@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Můj Wordle Klon</title>
+    </head>
+<body>
+
+<div id="auth-screen">
+        <div class="auth-container">
+            <h1 class="auth-title">LOGIN/REGISTER</h1>
+            <div class="auth-inputs">
+                <input type="text" id="username" placeholder="Uživatelské jméno">
+                <input type="password" id="password" placeholder="Heslo">
+                
+                <input type="password" id="password-confirm" placeholder="Potvrď heslo znovu" class="hidden">
+                
+                <div class="auth-buttons">
+                    <button id="login-btn" class="btn-login">Přihlásit</button>
+                    <button id="register-btn" class="btn-register hidden">Registrovat</button>
+                </div>
+                
+                <div id="auth-message"></div>
+                
+                <p id="auth-toggle-text">Nemáš účet? Zaregistruj se.</p>
+            </div>
+        </div>
+    </div>
+    
+<div class="header">
+        <h1 class="main-h1">Wordle Klon</h1>
+        <div class="header-buttons">
+            <button id="new-word-btn">Nové slovo</button>
+            <button id="show-profile-btn" class="btn-profile hidden">Můj Profil</button>
+            <button onclick="window.location.href='ranking.html'" class="btn-ranking">Žebříček</button>
+        </div>
+    </div>
+<php>
+    <div id="profile-screen" class="hidden">
+        <div class="profile-content">
+            <h2 class="profile-title">👤 <span id="prof-jmeno">Hráč</span></h2>
+            <hr class="profile-divider">
+            <p>Odehrané hry: <strong id="prof-hry"></strong></p>
+            <p>Výhry: <strong id="prof-vyhry" class="text-correct"></strong></p>
+            <p>Prohry: <strong id="prof-prohry" class="text-absent"></strong></p>
+            <p>Úspěšnost (Guess Rate): <strong id="prof-rate"></strong></p>
+            
+            <div class="profile-buttons">
+                <button id="close-profile-btn">Zavřít profil</button>
+                <button id="logout-btn" class="btn-logout">Odhlásit se</button>
+            </div>
+        </div>
+    </div>
+</php>
+    <div id="message"></div>
+    <div id="board"></div>
+    <div id="keyboard"></div>
+    <script src="script.js"></script>
+    </body>
+</html>
